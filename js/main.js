@@ -2,12 +2,13 @@ const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 const links = navLinks.querySelectorAll("a");
 
+// Toggle menu open/close
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
   document.body.classList.toggle("menu-open");
 });
 
-// Close menu when clicking a link
+// Close menu when a link is clicked
 links.forEach(link => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("show");

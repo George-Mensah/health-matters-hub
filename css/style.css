@@ -111,7 +111,6 @@ body {
   margin-top: 1.5rem;
 }
 
-/* MOBILE NAVIGATION */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -123,20 +122,27 @@ body {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
     height: 100vh;
     width: 70%;
     background-color: #ffffff;
     flex-direction: column;
     padding: 4rem 2rem;
-    transition: right 0.3s ease;
     z-index: 999;
     display: flex;
     flex-direction: column;
+    
+    /* Animation initial state */
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: all 0.35s ease;
   }
 
   .nav-links.show {
-    right: 0;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
   }
 
   .nav-links a {
@@ -147,9 +153,10 @@ body {
   }
 
   body.menu-open {
-    overflow: hidden;
+    overflow: hidden; /* Prevent background scroll */
   }
 }
+
 
 
 .footer {
