@@ -111,81 +111,13 @@ body {
   margin-top: 1.5rem;
 }
 
-/* MOBILE */
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    right: 0;
-    top: 60px;
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .nav-links a {
-    margin: 0.8rem 0;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin: 0.5rem 0 0.2rem;
-}
-
-input, textarea {
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
-}
-
-.note {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background: #fff;
-    flex-direction: column;
-    padding: 1rem;
-    display: none;
-
 /* MOBILE NAVIGATION */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
     font-size: 2rem;
     cursor: pointer;
+    z-index: 1000;
   }
 
   .nav-links {
@@ -199,7 +131,8 @@ input, textarea {
     padding: 4rem 2rem;
     transition: right 0.3s ease;
     z-index: 999;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
   }
 
   .nav-links.show {
@@ -209,39 +142,12 @@ input, textarea {
   .nav-links a {
     margin: 1.2rem 0;
     font-size: 1.1rem;
+    color: #2c3e50;
+    text-decoration: none;
   }
 
   body.menu-open {
-    overflow: hidden; /* prevent background scroll */
-  }
-}
-
-
-    /* Animation */
-    animation: slideDown 0.3s ease forwards;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    margin: 0.8rem 0;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    overflow: hidden;
   }
 }
 
