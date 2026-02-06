@@ -144,3 +144,27 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 0.5rem 0 0.2rem;
+}
+
+input, textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
