@@ -14,7 +14,7 @@
 
 <!-- HEADER -->
 <header class="header">
-    <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-overlay" id="navOverlay"></div>
   <div class="container nav-container">
     <div class="logo-container">
       <div class="logo">
@@ -35,66 +35,99 @@
       <a href="book.html" class="btn-primary btn-header"><i class="fas fa-calendar-check"></i> Book a Visit</a>
     </nav>
 
-    <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-  <span class="hamburger-line"></span>
-  <span class="hamburger-line"></span>
-  <span class="hamburger-line"></span>
-</button>
-    </div>
-    
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </div>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION WITH CAROUSEL -->
 <section class="hero hero-home">
-  <div class="hero-overlay"></div>
-  <div class="hero-shapes">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-  </div>
-
-  <div class="container hero-content">
-    <span class="hero-tag">
-      <i class="fas fa-star"></i> WELCOME TO HEALTH MATTERS HUB
-    </span>
-
-    <h1 class="hero-title">Where Medicine Meets Lifestyle for <span class="highlight-text">Lasting Health</span></h1>
-
-    <p class="hero-subtitle">
-      Experience convenient, personalized, and clinician-led virtual primary care 
-      and chronic disease management designed around your life.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="book.html" class="btn-primary btn-large">
-        <i class="fas fa-video"></i> Book a Virtual Visit
-      </a>
-      <a href="how-it-works.html" class="btn-secondary btn-large">
-        <i class="fas fa-question-circle"></i> How It Works
-      </a>
+  <div class="hero-carousel">
+    <!-- Slide 1 -->
+    <div class="carousel-slide active">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="hero-tag">
+          <i class="fas fa-star"></i> WELCOME TO HEALTH MATTERS HUB
+        </span>
+        <h1 class="hero-title">Where Medicine Meets Lifestyle for <span class="highlight-text">Lasting Health</span></h1>
+        <p class="hero-subtitle">
+          Experience convenient, personalized, and clinician-led virtual primary care 
+          and chronic disease management designed around your life.
+        </p>
+        <div class="hero-buttons">
+          <a href="book.html" class="btn-primary btn-large">
+            <i class="fas fa-video"></i> Book a Virtual Visit
+          </a>
+          <a href="how-it-works.html" class="btn-secondary btn-large">
+            <i class="fas fa-question-circle"></i> How It Works
+          </a>
+        </div>
+      </div>
     </div>
-
-    <!-- FLOATING HERO PANEL -->
-    <div class="hero-panel">
-      <div class="panel-item">
-        <i class="fas fa-laptop-medical"></i>
-        <h4>Virtual Visits</h4>
+    
+    <!-- Slide 2 -->
+    <div class="carousel-slide">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="hero-tag">
+          <i class="fas fa-heartbeat"></i> CHRONIC CARE MANAGEMENT
+        </span>
+        <h1 class="hero-title">Personalized Care for <span class="highlight-text">Chronic Conditions</span></h1>
+        <p class="hero-subtitle">
+          Expert management for hypertension, diabetes, cholesterol, and more. 
+          Get continuous support from board-certified providers.
+        </p>
+        <div class="hero-buttons">
+          <a href="services.html" class="btn-primary btn-large">
+            <i class="fas fa-stethoscope"></i> View Our Services
+          </a>
+          <a href="contact.html" class="btn-secondary btn-large">
+            <i class="fas fa-envelope"></i> Contact Us
+          </a>
+        </div>
       </div>
-      <div class="panel-item">
-        <i class="fas fa-heart"></i>
-        <h4>Chronic Care</h4>
+    </div>
+    
+    <!-- Slide 3 -->
+    <div class="carousel-slide">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="hero-tag">
+          <i class="fas fa-shield-alt"></i> PREVENTIVE HEALTHCARE
+        </span>
+        <h1 class="hero-title">Focus on <span class="highlight-text">Prevention & Wellness</span></h1>
+        <p class="hero-subtitle">
+          Proactive healthcare focused on long-term wellness, healthy habits, 
+          and preventive screenings from the comfort of your home.
+        </p>
+        <div class="hero-buttons">
+          <a href="book.html" class="btn-primary btn-large">
+            <i class="fas fa-calendar-check"></i> Schedule Appointment
+          </a>
+          <a href="about.html" class="btn-secondary btn-large">
+            <i class="fas fa-user-md"></i> Meet Our Provider
+          </a>
+        </div>
       </div>
-      <div class="panel-item">
-        <i class="fas fa-shield-alt"></i>
-        <h4>Preventive Care</h4>
+    </div>
+    
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+      <button class="carousel-prev" aria-label="Previous slide">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="carousel-indicators">
+        <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+        <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+        <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
       </div>
-      <div class="panel-item highlight">
-        <i class="fas fa-lock"></i>
-        <h4>HIPAA Secure</h4>
-      </div>
+      <button class="carousel-next" aria-label="Next slide">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </div>
 </section>
