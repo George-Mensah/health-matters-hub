@@ -3,27 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Health Matters Hub</title>
+  <title>Health Matters Hub | Virtual Primary Care & Wellness</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="header">
-  <div class="container nav">
-    <div class="logo">Health Matters Hub</div>
+  <div class="container nav-container">
+    <div class="logo-container">
+      <div class="logo">
+        <i class="fas fa-heartbeat logo-icon"></i>
+        <div>
+          <h1 class="logo-text">Health Matters Hub</h1>
+          <p class="logo-subtext">Virtual Primary Care Specialists</p>
+        </div>
+      </div>
+    </div>
 
     <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="book.html" class="btn-primary">Book a Visit</a>
+      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="services.html"><i class="fas fa-stethoscope"></i> Services</a>
+      <a href="how-it-works.html"><i class="fas fa-play-circle"></i> How It Works</a>
+      <a href="about.html"><i class="fas fa-user-md"></i> About</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="book.html" class="btn-primary btn-header"><i class="fas fa-calendar-check"></i> Book a Visit</a>
     </nav>
 
     <div class="hamburger" id="hamburger">
-      ☰
+      <i class="fas fa-bars"></i>
     </div>
   </div>
 </header>
@@ -31,132 +43,305 @@
 <!-- HERO SECTION -->
 <section class="hero hero-home">
   <div class="hero-overlay"></div>
+  <div class="hero-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
 
   <div class="container hero-content">
-    <span class="hero-tag">WELCOME TO HEALTH MATTERS HUB</span>
+    <span class="hero-tag">
+      <i class="fas fa-star"></i> WELCOME TO HEALTH MATTERS HUB
+    </span>
 
-    <h1>Where Medicine Meets Lifestyle for Lasting Health</h1>
+    <h1 class="hero-title">Where Medicine Meets Lifestyle for <span class="highlight-text">Lasting Health</span></h1>
 
-    <p>
-      Virtual primary care and chronic disease management — convenient,
-      personalized, and clinician-led.
+    <p class="hero-subtitle">
+      Experience convenient, personalized, and clinician-led virtual primary care 
+      and chronic disease management designed around your life.
     </p>
 
     <div class="hero-buttons">
-      <a href="book.html" class="btn-primary">Book a Virtual Visit</a>
-      <a href="how-it-works.html" class="btn-secondary">How It Works</a>
+      <a href="book.html" class="btn-primary btn-large">
+        <i class="fas fa-video"></i> Book a Virtual Visit
+      </a>
+      <a href="how-it-works.html" class="btn-secondary btn-large">
+        <i class="fas fa-question-circle"></i> How It Works
+      </a>
     </div>
 
-    <!-- FLOATING HERO PANEL (LIKE IMAGE) -->
+    <!-- FLOATING HERO PANEL -->
     <div class="hero-panel">
-      <div class="panel-item">Virtual Visits</div>
-      <div class="panel-item">Chronic Care</div>
-      <div class="panel-item">Preventive Care</div>
-      <div class="panel-item highlight">HIPAA Secure</div>
+      <div class="panel-item">
+        <i class="fas fa-laptop-medical"></i>
+        <h4>Virtual Visits</h4>
+      </div>
+      <div class="panel-item">
+        <i class="fas fa-heart"></i>
+        <h4>Chronic Care</h4>
+      </div>
+      <div class="panel-item">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Preventive Care</h4>
+      </div>
+      <div class="panel-item highlight">
+        <i class="fas fa-lock"></i>
+        <h4>HIPAA Secure</h4>
+      </div>
     </div>
   </div>
 </section>
 
-
-
 <!-- WHAT WE OFFER -->
-<section class="section">
-  <div class="container grid-4">
-    <div class="card">
-      <h3>Virtual Primary Care</h3>
-      <p>Ongoing primary care from the comfort of your home.</p>
+<section class="section services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Comprehensive Services</h2>
+      <p class="section-subtitle">Delivering high-quality healthcare directly to you, wherever you are.</p>
     </div>
-    <div class="card">
-      <h3>Chronic Disease Management</h3>
-      <p>Support for hypertension, diabetes, cholesterol, and more.</p>
-    </div>
-    <div class="card">
-      <h3>Preventive & Lifestyle Care</h3>
-      <p>Focused on long-term wellness and healthy habits.</p>
-    </div>
-    <div class="card">
-      <h3>Medication Management</h3>
-      <p>Refills, adjustments, and monitoring made simple.</p>
+    
+    <div class="grid-4">
+      <div class="card service-card">
+        <div class="card-icon">
+          <i class="fas fa-user-md"></i>
+        </div>
+        <h3>Virtual Primary Care</h3>
+        <p>Ongoing comprehensive primary care from the comfort of your home with consistent provider relationships.</p>
+        <a href="services.html#primary-care" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="card service-card">
+        <div class="card-icon">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <h3>Chronic Disease Management</h3>
+        <p>Personalized support for hypertension, diabetes, cholesterol, and other chronic conditions.</p>
+        <a href="services.html#chronic-care" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="card service-card">
+        <div class="card-icon">
+          <i class="fas fa-apple-alt"></i>
+        </div>
+        <h3>Preventive & Lifestyle Care</h3>
+        <p>Focused on long-term wellness through healthy habits, nutrition, and preventive screenings.</p>
+        <a href="services.html#preventive-care" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="card service-card">
+        <div class="card-icon">
+          <i class="fas fa-pills"></i>
+        </div>
+        <h3>Medication Management</h3>
+        <p>Refills, adjustments, and monitoring with convenient pharmacy coordination and follow-ups.</p>
+        <a href="services.html#medication" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="section light">
-  <div class="container grid-3">
-    <div class="step">
-      <h3>1. Book Online</h3>
-      <p>Schedule your visit in minutes.</p>
+<section class="section light how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Simple, Seamless Process</h2>
+      <p class="section-subtitle">Three easy steps to better health from the comfort of your home.</p>
     </div>
-    <div class="step">
-      <h3>2. Meet Virtually</h3>
-      <p>See your provider securely from anywhere.</p>
+    
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Book Online</h3>
+          <p>Schedule your virtual visit in minutes using our secure online booking system.</p>
+        </div>
+      </div>
+      <div class="step-connector">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Meet Virtually</h3>
+          <p>Connect with your provider via secure video call from anywhere at your scheduled time.</p>
+        </div>
+      </div>
+      <div class="step-connector">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Get Ongoing Care</h3>
+          <p>Receive prescriptions, lab orders, and follow-up care with continuous support.</p>
+        </div>
+      </div>
     </div>
-    <div class="step">
-      <h3>3. Get Ongoing Care</h3>
-      <p>Prescriptions, labs, and follow-ups handled for you.</p>
+    
+    <div class="center">
+      <a href="book.html" class="btn-primary btn-large">
+        <i class="fas fa-calendar-plus"></i> Start Your Journey
+      </a>
     </div>
-  </div>
-  <div class="center">
-    <a href="book.html" class="btn-primary">Book a Visit</a>
   </div>
 </section>
 
 <!-- WHO THIS IS FOR -->
-<section class="section">
+<section class="section audience-section">
   <div class="container">
-    <h2>Who This Is For</h2>
-    <ul class="list">
-      <li>Adults managing chronic conditions</li>
-      <li>Busy professionals</li>
-      <li>Patients who prefer virtual care</li>
-      <li>Preventive and lifestyle-focused individuals</li>
-    </ul>
-  </div>
-</section>
-
-    </ul>
+    <div class="section-header">
+      <h2 class="section-title">Designed For Your Lifestyle</h2>
+      <p class="section-subtitle">Our virtual care model fits seamlessly into your busy life.</p>
+    </div>
+    
+    <div class="audience-grid">
+      <div class="audience-card">
+        <i class="fas fa-chart-line"></i>
+        <h4>Chronic Condition Management</h4>
+        <p>Adults managing hypertension, diabetes, cholesterol, and other chronic conditions.</p>
+      </div>
+      <div class="audience-card">
+        <i class="fas fa-briefcase"></i>
+        <h4>Busy Professionals</h4>
+        <p>Those with demanding schedules who need flexible, time-efficient healthcare.</p>
+      </div>
+      <div class="audience-card">
+        <i class="fas fa-laptop-house"></i>
+        <h4>Virtual Care Preference</h4>
+        <p>Patients who prefer the convenience and comfort of telehealth services.</p>
+      </div>
+      <div class="audience-card">
+        <i class="fas fa-dumbbell"></i>
+        <h4>Preventive & Wellness Focus</h4>
+        <p>Individuals focused on long-term health, prevention, and healthy lifestyle habits.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- TRUST & CREDENTIALS -->
-<section class="section light">
+<section class="section light credentials-section">
   <div class="container">
-    <h2>Trust & Credentials</h2>
-    <ul class="list trust">
-      <li>✔ Board-Certified Nurse Practitioner</li>
-      <li>✔ HIPAA-compliant platform</li>
-      <li>✔ Secure messaging & virtual visits</li>
-    </ul>
+    <div class="section-header">
+      <h2 class="section-title">Trust & Credentials</h2>
+      <p class="section-subtitle">Your health is in expert hands with our certified medical professionals.</p>
+    </div>
+    
+    <div class="credentials-grid">
+      <div class="credential-card">
+        <div class="credential-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3>Board-Certified Provider</h3>
+        <p>Our Nurse Practitioner is board-certified with extensive experience in primary care and chronic disease management.</p>
+      </div>
+      <div class="credential-card">
+        <div class="credential-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>HIPAA-Compliant Platform</h3>
+        <p>All consultations and health data are protected with enterprise-grade security and full HIPAA compliance.</p>
+      </div>
+      <div class="credential-card">
+        <div class="credential-icon">
+          <i class="fas fa-comments-medical"></i>
+        </div>
+        <h3>Secure Communication</h3>
+        <p>Safe messaging, virtual visits, and confidential health record access through our encrypted platform.</p>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- TESTIMONIAL -->
+<section class="section testimonial-section">
+  <div class="container">
+    <div class="testimonial">
+      <i class="fas fa-quote-left quote-icon"></i>
+      <p class="testimonial-text">Health Matters Hub has transformed how I manage my diabetes. The convenience of virtual visits and the personalized care plan has made a significant difference in my health journey.</p>
+      <div class="testimonial-author">
+        <h4>James Wilson</h4>
+        <p>Patient since 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FINAL CTA -->
 <section class="cta">
-  <h2>Take Control of Your Health Today</h2>
-  <a href="book.html" class="btn-primary">Schedule Your Virtual Visit</a>
+  <div class="container">
+    <div class="cta-content">
+      <h2>Take Control of Your Health Today</h2>
+      <p>Schedule your first virtual visit and experience healthcare designed for your modern lifestyle.</p>
+      <a href="book.html" class="btn-primary btn-large btn-cta">
+        <i class="fas fa-video"></i> Schedule Your Virtual Visit
+      </a>
+      <p class="cta-note">
+        <i class="fas fa-phone-alt"></i> Questions? Call us at (555) 123-HEALTH
+      </p>
+    </div>
+  </div>
 </section>
-
-<script src="js/main.js"></script>
-</body>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-container">
-
-    <div class="footer-info">
-      <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
-      <p>
-        <a href="contact.html">Contact</a> | 
-        <a href="privacy.html">Privacy Policy</a>
-      </p>
+    <div class="footer-main">
+      <div class="footer-logo">
+        <i class="fas fa-heartbeat footer-logo-icon"></i>
+        <div>
+          <h3>Health Matters Hub</h3>
+          <p>Virtual Primary Care & Wellness</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="contact-info">
+            <i class="fas fa-envelope"></i> info@healthmattershub.com<br>
+            <i class="fas fa-phone"></i> (555) 123-HEALTH
+          </p>
+        </div>
+      </div>
     </div>
-
-    <div class="footer-note">
-      <p>
-        ⚠️ For medical questions, please schedule a visit. This site does not provide medical advice.
-      </p>
+    
+    <div class="footer-bottom">
+      <div class="footer-info">
+        <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
+        <p>
+          <a href="contact.html">Contact</a> | 
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="terms.html">Terms of Service</a>
+        </p>
+      </div>
+      
+      <div class="footer-note">
+        <p>
+          <i class="fas fa-exclamation-triangle"></i> For medical emergencies, call 911. This site does not provide medical advice.
+        </p>
+      </div>
     </div>
   </div>
 </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
