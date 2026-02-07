@@ -75,6 +75,7 @@ body {
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
 }
@@ -142,6 +143,14 @@ body {
 
 /* MOBILE */
 @media (max-width: 768px) {
+    .hero {
+    min-height: 75vh;
+    background-position: top center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
   .hero-home h1 {
     font-size: 1.9rem;
   }
