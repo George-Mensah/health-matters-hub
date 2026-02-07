@@ -172,68 +172,78 @@ document.addEventListener('DOMContentLoaded', function() {
   // MOBILE NAVIGATION FUNCTIONALITY
   // ============================================
   
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  const navOverlay = document.getElementById('navOverlay');
-  
-  if (hamburger && navLinks && navOverlay) {
-    console.log('Navigation elements found');
+  // In your main.js, update the hamburger code
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+const navOverlay = document.getElementById('navOverlay');
+
+if (hamburger && navLinks && navOverlay) {
+  // Toggle mobile menu
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    this.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    navOverlay.classList.toggle('active');
     
-    // Toggle mobile menu
-    hamburger.addEventListener('click', function(e) {
-      e.stopPropagation();
-      this.classList.toggle('active');
-      navLinks.classList.toggle('active');
-      navOverlay.classList.toggle('active');
-      document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-    });
-    
-    // Close menu when clicking overlay
-    navOverlay.addEventListener('click', function() {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-      this.classList.remove('active');
+    // Prevent body scroll when menu is open
+    if (navLinks.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
       document.body.style.overflow = '';
-    });
-    
-    // Close menu when clicking a link (on mobile)
-    const navItems = document.querySelectorAll('.nav-links a');
-    navItems.forEach(item => {
-      item.addEventListener('click', function() {
-        if (window.innerWidth < 768) {
-          hamburger.classList.remove('active');
-          navLinks.classList.remove('active');
-          navOverlay.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      });
-    });
-    
-    // Close menu when clicking outside on mobile
-    document.addEventListener('click', function(event) {
-      if (window.innerWidth < 768 && 
-          navLinks.classList.contains('active') && 
-          !navLinks.contains(event.target) && 
-          !hamburger.contains(event.target)) {
+      document.documentElement.style.overflow = '';
+    }
+  });
+  
+  // Close menu when clicking overlay
+  navOverlay.addEventListener('click', function() {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    this.classList.remove('active');
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
+  });
+  
+  // Close menu when clicking a link
+  const navItems = document.querySelectorAll('.nav-links a');
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      if (window.innerWidth < 768) {
         hamburger.classList.remove('active');
         navLinks.classList.remove('active');
         navOverlay.classList.remove('active');
         document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
       }
     });
-    
-    // Handle window resize
-    window.addEventListener('resize', function() {
+  });
+  
+  // Close menu on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      navOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    }
+  });
+  
+  // Handle window resize
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
       if (window.innerWidth >= 768) {
         hamburger.classList.remove('active');
         navLinks.classList.remove('active');
         navOverlay.classList.remove('active');
         document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
       }
-    });
-  } else {
-    console.warn('Navigation elements not found on this page');
-  }
+    }, 250);
+  });
+}
 
   // ============================================
   // SMOOTH SCROLL FOR ANCHOR LINKS
