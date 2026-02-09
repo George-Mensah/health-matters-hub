@@ -3,110 +3,702 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Visit | Health Matters Hub</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Book Appointment | Health Matters Hub | Virtual Primary Care</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- HEADER (consistent with homepage) -->
 <header class="header">
-  <div class="container nav">
-    <div class="logo">Health Matters Hub</div>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="container nav-container">
+    <div class="logo-container">
+      <div class="logo">
+        <i class="fas fa-heartbeat logo-icon"></i>
+        <div>
+          <h1 class="logo-text">Health Matters Hub</h1>
+          <p class="logo-subtext">Virtual Primary Care Specialists</p>
+        </div>
+      </div>
+    </div>
 
     <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="book.html" class="btn-primary">Book a Visit</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="services.html"><i class="fas fa-stethoscope"></i> Services</a>
+      <a href="how-it-works.html"><i class="fas fa-play-circle"></i> How It Works</a>
+      <a href="about.html"><i class="fas fa-user-md"></i> About</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="book.html" class="active btn-primary btn-header"><i class="fas fa-calendar-check"></i> Book a Visit</a>
     </nav>
 
-    <div class="hamburger" id="hamburger">☰</div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </div>
 </header>
 
 <!-- PAGE HERO -->
-<section class="hero">
+<section class="hero hero-booking">
+  <div class="hero-overlay"></div>
   <div class="container">
-    <h1>Book a Virtual Visit</h1>
-    <p>Secure, convenient care led by a licensed clinician.</p>
+    <div class="hero-content">
+      <span class="hero-tag">
+        <i class="fas fa-calendar-check"></i> BOOK YOUR VISIT
+      </span>
+      <h1 class="hero-title">Schedule Your Virtual Care Appointment</h1>
+      <p class="hero-subtitle">
+        Choose your appointment type, select a convenient time, and complete your 
+        booking in just a few minutes. Experience healthcare that works around your schedule.
+      </p>
+      <div class="hero-buttons">
+        <a href="#booking-process" class="btn-primary btn-large">
+          <i class="fas fa-arrow-down"></i> Start Booking
+        </a>
+        <a href="how-it-works.html" class="btn-secondary btn-large">
+          <i class="fas fa-question-circle"></i> How It Works
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- VISIT TYPES -->
-<section class="section">
-  <div class="container grid-3">
-
-    <div class="card">
-      <h3>New Patient Visit</h3>
-      <p>
-        Initial consultation to review your medical history,
-        current concerns, and health goals.
-      </p>
-      <p><strong>Approx. length:</strong> 30–45 minutes</p>
+<!-- BOOKING PROCESS STEPS -->
+<section class="section booking-steps" id="booking-process">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Simple 3-Step Booking Process</h2>
+      <p class="section-subtitle">Book your appointment in minutes with our easy scheduling system</p>
     </div>
-
-    <div class="card">
-      <h3>Follow-Up Visit</h3>
-      <p>
-        Ongoing management of chronic conditions,
-        medication adjustments, and progress review.
-      </p>
-      <p><strong>Approx. length:</strong> 20–30 minutes</p>
+    
+    <div class="process-indicator">
+      <div class="process-step active" data-step="1">
+        <div class="step-circle">1</div>
+        <div class="step-label">Select Visit Type</div>
+      </div>
+      <div class="process-step" data-step="2">
+        <div class="step-circle">2</div>
+        <div class="step-label">Choose Date & Time</div>
+      </div>
+      <div class="process-step" data-step="3">
+        <div class="step-circle">3</div>
+        <div class="step-label">Complete Booking</div>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>Preventive & Lifestyle Visit</h3>
-      <p>
-        Focused on wellness planning, lifestyle changes,
-        and preventive health strategies.
-      </p>
-      <p><strong>Approx. length:</strong> 20–30 minutes</p>
-    </div>
-
   </div>
 </section>
 
-<!-- COMING SOON -->
-<section class="section light">
-  <div class="container center">
-    <h2>Online Scheduling Coming Soon</h2>
-    <p>
-      Secure online booking will be available shortly.
-      In the meantime, you may contact us for general inquiries
-      or check back soon to schedule your visit.
-    </p>
+<!-- STEP 1: VISIT TYPES -->
+<section class="section light visit-types-section" id="step-1">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Select Your Visit Type</h2>
+      <p class="section-subtitle">Choose the appointment that best fits your healthcare needs</p>
+    </div>
+    
+    <div class="visit-types-grid">
+      <!-- New Patient Visit -->
+      <div class="visit-type-card selected" data-visit-type="new-patient">
+        <div class="visit-type-header">
+          <div class="visit-type-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <div class="visit-type-badge">Most Popular</div>
+        </div>
+        <h3>New Patient Visit</h3>
+        <p class="visit-description">
+          Comprehensive initial consultation to establish your care plan, 
+          review medical history, and discuss health goals.
+        </p>
+        <div class="visit-details">
+          <div class="detail-item">
+            <i class="far fa-clock"></i>
+            <span><strong>45-60 minutes</strong></span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-user-md"></i>
+            <span>Comprehensive assessment</span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-file-medical"></i>
+            <span>Care plan development</span>
+          </div>
+        </div>
+        <div class="visit-price">
+          <span class="price">$149</span>
+          <span class="price-note">Initial consultation</span>
+        </div>
+        <button class="btn-primary btn-select" data-visit="new-patient">
+          Select This Visit
+        </button>
+      </div>
+      
+      <!-- Follow-Up Visit -->
+      <div class="visit-type-card" data-visit-type="follow-up">
+        <div class="visit-type-header">
+          <div class="visit-type-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+        </div>
+        <h3>Follow-Up Visit</h3>
+        <p class="visit-description">
+          Ongoing management of chronic conditions, medication reviews, 
+          and progress tracking with your established provider.
+        </p>
+        <div class="visit-details">
+          <div class="detail-item">
+            <i class="far fa-clock"></i>
+            <span><strong>20-30 minutes</strong></span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-heartbeat"></i>
+            <span>Chronic condition management</span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-pills"></i>
+            <span>Medication adjustments</span>
+          </div>
+        </div>
+        <div class="visit-price">
+          <span class="price">$99</span>
+          <span class="price-note">Established patients</span>
+        </div>
+        <button class="btn-primary btn-select" data-visit="follow-up">
+          Select This Visit
+        </button>
+      </div>
+      
+      <!-- Preventive & Lifestyle -->
+      <div class="visit-type-card" data-visit-type="preventive">
+        <div class="visit-type-header">
+          <div class="visit-type-icon">
+            <i class="fas fa-apple-alt"></i>
+          </div>
+        </div>
+        <h3>Preventive & Wellness Visit</h3>
+        <p class="visit-description">
+          Focused on health maintenance, preventive screenings, lifestyle coaching, 
+          and optimizing your long-term wellness.
+        </p>
+        <div class="visit-details">
+          <div class="detail-item">
+            <i class="far fa-clock"></i>
+            <span><strong>30-45 minutes</strong></span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-dumbbell"></i>
+            <span>Lifestyle guidance</span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>Preventive care planning</span>
+          </div>
+        </div>
+        <div class="visit-price">
+          <span class="price">$119</span>
+          <span class="price-note">Wellness focus</span>
+        </div>
+        <button class="btn-primary btn-select" data-visit="preventive">
+          Select This Visit
+        </button>
+      </div>
+    </div>
+    
+    <div class="insurance-note">
+      <i class="fas fa-info-circle"></i>
+      <p>
+        <strong>Insurance accepted:</strong> We accept most major insurance plans. 
+        Self-pay rates shown above. Insurance verification occurs after booking.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Ready When You Are</h2>
-  <a href="contact.html" class="btn-primary">Contact Us</a>
+<!-- STEP 2: DATE & TIME SELECTION -->
+<section class="section date-time-section" id="step-2" style="display: none;">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Choose Your Appointment Time</h2>
+      <p class="section-subtitle">Select a date and time that works best for your schedule</p>
+      <div class="selected-visit-summary">
+        <i class="fas fa-calendar-alt"></i>
+        <span id="selectedVisitType">New Patient Visit</span>
+        <span class="visit-duration">45-60 minutes</span>
+      </div>
+    </div>
+    
+    <div class="scheduling-container">
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <button class="calendar-nav" id="prevMonth">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <h3 id="currentMonth">March 2025</h3>
+          <button class="calendar-nav" id="nextMonth">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="calendar-grid" id="calendarGrid">
+          <!-- Calendar will be populated by JavaScript -->
+          <div class="calendar-loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading available dates...</p>
+          </div>
+        </div>
+        <div class="calendar-legend">
+          <div class="legend-item">
+            <span class="legend-box available"></span>
+            <span>Available</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-box selected-day"></span>
+            <span>Selected</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-box unavailable"></span>
+            <span>Unavailable</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="time-selection-container">
+        <h3>Available Time Slots</h3>
+        <p class="selected-date" id="selectedDate">Select a date to view available times</p>
+        
+        <div class="time-slots" id="timeSlots">
+          <div class="time-slot-group">
+            <h4>Morning <small>(8:00 AM - 12:00 PM)</small></h4>
+            <div class="time-slots-grid">
+              <button class="time-slot">8:00 AM</button>
+              <button class="time-slot">8:30 AM</button>
+              <button class="time-slot">9:00 AM</button>
+              <button class="time-slot">9:30 AM</button>
+              <button class="time-slot">10:00 AM</button>
+              <button class="time-slot">10:30 AM</button>
+              <button class="time-slot">11:00 AM</button>
+              <button class="time-slot">11:30 AM</button>
+            </div>
+          </div>
+          
+          <div class="time-slot-group">
+            <h4>Afternoon <small>(1:00 PM - 5:00 PM)</small></h4>
+            <div class="time-slots-grid">
+              <button class="time-slot">1:00 PM</button>
+              <button class="time-slot">1:30 PM</button>
+              <button class="time-slot">2:00 PM</button>
+              <button class="time-slot">2:30 PM</button>
+              <button class="time-slot">3:00 PM</button>
+              <button class="time-slot">3:30 PM</button>
+              <button class="time-slot">4:00 PM</button>
+              <button class="time-slot">4:30 PM</button>
+            </div>
+          </div>
+          
+          <div class="time-slot-group">
+            <h4>Evening <small>(6:00 PM - 8:00 PM)</small></h4>
+            <div class="time-slots-grid">
+              <button class="time-slot">6:00 PM</button>
+              <button class="time-slot">6:30 PM</button>
+              <button class="time-slot">7:00 PM</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="selected-appointment" id="selectedAppointment" style="display: none;">
+          <h4>Selected Appointment</h4>
+          <div class="appointment-details">
+            <div class="detail">
+              <i class="fas fa-calendar-day"></i>
+              <div>
+                <strong id="appointmentDate">Monday, March 10, 2025</strong>
+                <p>Date</p>
+              </div>
+            </div>
+            <div class="detail">
+              <i class="far fa-clock"></i>
+              <div>
+                <strong id="appointmentTime">10:00 AM</strong>
+                <p>Time</p>
+              </div>
+            </div>
+            <div class="detail">
+              <i class="fas fa-user-md"></i>
+              <div>
+                <strong id="appointmentType">New Patient Visit</strong>
+                <p>Visit Type</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn-primary btn-confirm-time" id="confirmTime">
+            Confirm Date & Time
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="navigation-buttons">
+      <button class="btn-secondary" id="backToStep1">
+        <i class="fas fa-arrow-left"></i> Back to Visit Types
+      </button>
+      <div class="booking-tip">
+        <i class="fas fa-lightbulb"></i>
+        <p>Appointments are available up to 90 days in advance</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<script src="js/main.js"></script>
-</body>
-</html>
+<!-- STEP 3: PATIENT INFORMATION -->
+<section class="section light patient-info-section" id="step-3" style="display: none;">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Complete Your Booking</h2>
+      <p class="section-subtitle">Please provide your information to finalize your appointment</p>
+    </div>
+    
+    <div class="booking-summary">
+      <div class="summary-card">
+        <h3>Appointment Summary</h3>
+        <div class="summary-details">
+          <div class="summary-item">
+            <i class="fas fa-calendar-day"></i>
+            <div>
+              <strong id="summaryDate">Monday, March 10, 2025</strong>
+              <p>Date</p>
+            </div>
+          </div>
+          <div class="summary-item">
+            <i class="far fa-clock"></i>
+            <div>
+              <strong id="summaryTime">10:00 AM EST</strong>
+              <p>Time</p>
+            </div>
+          </div>
+          <div class="summary-item">
+            <i class="fas fa-user-md"></i>
+            <div>
+              <strong id="summaryType">New Patient Visit</strong>
+              <p>Visit Type</p>
+            </div>
+          </div>
+          <div class="summary-item">
+            <i class="far fa-clock"></i>
+            <div>
+              <strong>45-60 minutes</strong>
+              <p>Duration</p>
+            </div>
+          </div>
+        </div>
+        <div class="summary-actions">
+          <button class="btn-secondary btn-sm" id="changeAppointment">
+            <i class="fas fa-edit"></i> Change
+          </button>
+        </div>
+      </div>
+      
+      <div class="patient-form-container">
+        <div class="form-card">
+          <h3>Patient Information</h3>
+          <p>Please fill out the form below to complete your booking.</p>
+          
+          <form id="patientForm" class="patient-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+                <div class="form-note">Confirmation will be sent here</div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="dob">Date of Birth *</label>
+              <input type="date" id="dob" name="dob" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="reason">Primary Reason for Visit</label>
+              <textarea id="reason" name="reason" rows="3" 
+                placeholder="Briefly describe what you'd like to discuss during your visit..."></textarea>
+              <div class="form-note">
+                <i class="fas fa-info-circle"></i> This helps us prepare for your appointment
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Are you a new or existing patient? *</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="patientType" value="new" required>
+                  <span class="radio-custom"></span>
+                  <span>New Patient</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="patientType" value="existing" required>
+                  <span class="radio-custom"></span>
+                  <span>Existing Patient</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="insurance">Insurance Provider (Optional)</label>
+              <select id="insurance" name="insurance">
+                <option value="">Select insurance provider</option>
+                <option value="aetna">Aetna</option>
+                <option value="bluecross">Blue Cross Blue Shield</option>
+                <option value="cigna">Cigna</option>
+                <option value="united">UnitedHealthcare</option>
+                <option value="medicare">Medicare</option>
+                <option value="medicaid">Medicaid</option>
+                <option value="other">Other / Not Insured</option>
+              </select>
+              <div class="form-note">
+                We'll verify your benefits and contact you if there are any coverage questions
+              </div>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">
+                I consent to receive appointment reminders and communications via email and text message
+              </label>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy">
+                I have read and agree to the <a href="privacy.html">Privacy Policy</a> 
+                and <a href="terms.html">Terms of Service</a>
+              </label>
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn-secondary" id="backToStep2">
+                <i class="fas fa-arrow-left"></i> Back
+              </button>
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-calendar-check"></i> Complete Booking
+              </button>
+            </div>
+            
+            <div class="form-note secure-note">
+              <i class="fas fa-lock"></i>
+              <span>Your information is secure and encrypted. We are HIPAA compliant.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- BOOKING CONFIRMATION -->
+<section class="section confirmation-section" id="confirmation" style="display: none;">
+  <div class="container">
+    <div class="confirmation-card">
+      <div class="confirmation-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h2>Appointment Confirmed!</h2>
+      <p class="confirmation-subtitle">
+        Your virtual care appointment has been successfully scheduled.
+      </p>
+      
+      <div class="confirmation-details">
+        <div class="confirmation-item">
+          <i class="fas fa-calendar-day"></i>
+          <div>
+            <strong id="confirmDate">Monday, March 10, 2025</strong>
+            <p>Appointment Date</p>
+          </div>
+        </div>
+        <div class="confirmation-item">
+          <i class="far fa-clock"></i>
+          <div>
+            <strong id="confirmTime">10:00 AM EST</strong>
+            <p>Appointment Time</p>
+          </div>
+        </div>
+        <div class="confirmation-item">
+          <i class="fas fa-user-md"></i>
+          <div>
+            <strong id="confirmType">New Patient Visit</strong>
+            <p>Visit Type</p>
+          </div>
+        </div>
+        <div class="confirmation-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong id="confirmEmail">patient@example.com</strong>
+            <p>Confirmation Sent To</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="confirmation-instructions">
+        <h3>Next Steps</h3>
+        <ol>
+          <li>Check your email for appointment confirmation and instructions</li>
+          <li>Complete your pre-visit questionnaire (sent via email)</li>
+          <li>At your appointment time, click the secure video link in your reminder email</li>
+          <li>Ensure you have a stable internet connection, webcam, and microphone</li>
+        </ol>
+      </div>
+      
+      <div class="confirmation-actions">
+        <a href="index.html" class="btn-primary">
+          <i class="fas fa-home"></i> Return to Home
+        </a>
+        <a href="how-it-works.html" class="btn-secondary">
+          <i class="fas fa-question-circle"></i> How to Prepare
+        </a>
+        <button class="btn-text" id="addToCalendar">
+          <i class="fas fa-calendar-plus"></i> Add to Calendar
+        </button>
+      </div>
+      
+      <div class="confirmation-note">
+        <i class="fas fa-phone-alt"></i>
+        <p>
+          Need to make changes? Call us at <strong>(555) 123-HEALTH</strong> 
+          at least 24 hours before your appointment.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- FOOTER -->
+<!-- PRE-BOOKING FAQ -->
+<section class="section faq-booking">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Booking Questions</h2>
+      <p class="section-subtitle">Common questions about scheduling virtual visits</p>
+    </div>
+    
+    <div class="faq-booking-grid">
+      <div class="faq-booking-item">
+        <h4><i class="far fa-question-circle"></i> How far in advance can I book?</h4>
+        <p>Appointments can be scheduled up to 90 days in advance. Same-day appointments may be available based on provider schedule.</p>
+      </div>
+      
+      <div class="faq-booking-item">
+        <h4><i class="far fa-question-circle"></i> What if I need to cancel or reschedule?</h4>
+        <p>You can reschedule or cancel up to 24 hours before your appointment without charge. Late cancellations may incur a fee.</p>
+      </div>
+      
+      <div class="faq-booking-item">
+        <h4><i class="far fa-question-circle"></i> Do you accept insurance?</h4>
+        <p>Yes, we accept most major insurance plans. We'll verify your benefits and contact you if there are coverage questions.</p>
+      </div>
+      
+      <div class="faq-booking-item">
+        <h4><i class="far fa-question-circle"></i> What technology do I need?</h4>
+        <p>You'll need a smartphone, tablet, or computer with camera and microphone, plus a stable internet connection.</p>
+      </div>
+      
+      <div class="faq-booking-item">
+        <h4><i class="far fa-question-circle"></i> Can family members join the visit?</h4>
+        <p>Yes, family members can join the video call. Please let us know in advance if multiple people will be attending.</p>
+      </div>
+      
+      <div class="faq-booking-item">
+        <h4><i class="far fa-question-circle"></i> What if I have technical issues?</h4>
+        <p>Technical support is available 30 minutes before your appointment. We can also switch to a phone call if needed.</p>
+      </div>
+    </div>
+    
+    <div class="center">
+      <a href="contact.html" class="btn-secondary">
+        <i class="fas fa-headset"></i> Still Have Questions?
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (consistent with homepage) -->
 <footer class="footer">
   <div class="container footer-container">
-
-    <div class="footer-info">
-      <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
-      <p>
-        <a href="contact.html">Contact</a> | 
-        <a href="privacy.html">Privacy Policy</a>
-      </p>
+    <div class="footer-main">
+      <div class="footer-logo">
+        <i class="fas fa-heartbeat footer-logo-icon"></i>
+        <div>
+          <h3>Health Matters Hub</h3>
+          <p>Virtual Primary Care & Wellness</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="contact-info">
+            <i class="fas fa-envelope"></i> info@healthmattershub.com<br>
+            <i class="fas fa-phone"></i> (555) 123-HEALTH
+          </p>
+        </div>
+      </div>
     </div>
-
-    <div class="footer-note">
-      <p>
-        ⚠️ For medical questions, please schedule a visit. This site does not provide medical advice.
-      </p>
+    
+    <div class="footer-bottom">
+      <div class="footer-info">
+        <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
+        <p>
+          <a href="contact.html">Contact</a> | 
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="terms.html">Terms of Service</a>
+        </p>
+      </div>
+      
+      <div class="footer-note">
+        <p>
+          <i class="fas fa-exclamation-triangle"></i> For medical emergencies, call 911. This site does not provide medical advice.
+        </p>
+      </div>
     </div>
   </div>
 </footer>
+
+<script src="js/main.js"></script>
+<script src="js/bookings.js"></script>
+</body>
+</html>

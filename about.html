@@ -3,121 +3,477 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Health Matters Hub</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>About Us | Health Matters Hub | Virtual Primary Care & Wellness</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- HEADER (consistent with homepage) -->
 <header class="header">
-  <div class="container nav">
-    <div class="logo">Health Matters Hub</div>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="container nav-container">
+    <div class="logo-container">
+      <div class="logo">
+        <i class="fas fa-heartbeat logo-icon"></i>
+        <div>
+          <h1 class="logo-text">Health Matters Hub</h1>
+          <p class="logo-subtext">Virtual Primary Care Specialists</p>
+        </div>
+      </div>
+    </div>
 
     <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="book.html" class="btn-primary">Book a Visit</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="services.html"><i class="fas fa-stethoscope"></i> Services</a>
+      <a href="how-it-works.html"><i class="fas fa-play-circle"></i> How It Works</a>
+      <a href="about.html" class="active"><i class="fas fa-user-md"></i> About</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="book.html" class="btn-primary btn-header"><i class="fas fa-calendar-check"></i> Book a Visit</a>
     </nav>
 
-    <div class="hamburger" id="hamburger">☰</div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </div>
 </header>
 
 <!-- PAGE HERO -->
-<section class="hero">
+<section class="hero hero-about">
+  <div class="hero-overlay"></div>
   <div class="container">
-    <h1>About Health Matters Hub</h1>
-    <p>Personalized virtual care rooted in medicine, lifestyle, and prevention.</p>
+    <div class="hero-content">
+      <span class="hero-tag">
+        <i class="fas fa-heart"></i> OUR STORY
+      </span>
+      <h1 class="hero-title">Where Compassion Meets Innovation in Healthcare</h1>
+      <p class="hero-subtitle">
+        We're reimagining primary care by combining medical expertise with modern technology, 
+        creating a healthcare experience that's both personal and profoundly convenient.
+      </p>
+      <div class="hero-buttons">
+        <a href="#our-story" class="btn-primary btn-large">
+          <i class="fas fa-book-open"></i> Our Journey
+        </a>
+        <a href="#meet-provider" class="btn-secondary btn-large">
+          <i class="fas fa-user-md"></i> Meet Our Provider
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ABOUT CONTENT -->
-<section class="section">
+<!-- MISSION & VISION -->
+<section class="section mission-section">
   <div class="container">
-    <h2>Our Philosophy</h2>
-    <p>
-      Health Matters Hub was created to provide thoughtful, accessible healthcare
-      that looks beyond symptoms. We focus on understanding the whole person —
-      lifestyle, habits, and long-term health goals.
-    </p>
+    <div class="mission-grid">
+      <div class="mission-card mission-card-primary">
+        <div class="mission-icon">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h2>Our Mission</h2>
+        <p>
+          To empower individuals to take control of their health through accessible, 
+          compassionate, and clinician-led virtual care that fits modern lifestyles.
+        </p>
+      </div>
+      
+      <div class="mission-card mission-card-secondary">
+        <div class="mission-icon">
+          <i class="fas fa-eye"></i>
+        </div>
+        <h2>Our Vision</h2>
+        <p>
+          To become the trusted virtual primary care partner for individuals seeking 
+          personalized, continuous healthcare that prioritizes prevention and long-term wellness.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section light">
+<!-- OUR STORY -->
+<section class="section light story-section" id="our-story">
   <div class="container">
-    <h2>Why Telemedicine</h2>
-    <p>
-      Virtual care allows patients to receive consistent, high-quality medical
-      support without the barriers of travel or long wait times. It offers
-      convenience while maintaining clinical standards and patient safety.
-    </p>
+    <div class="section-header">
+      <h2 class="section-title">Our Story</h2>
+      <p class="section-subtitle">The journey that led us to reimagine healthcare delivery</p>
+    </div>
+    
+    <div class="story-content">
+      <div class="story-text">
+        <p>
+          Health Matters Hub was born from a simple observation: quality healthcare shouldn't 
+          require hours of travel, long wait times, or navigating complex systems. As healthcare 
+          professionals, we saw patients struggling to balance their health needs with busy lives, 
+          work demands, and personal commitments.
+        </p>
+        <p>
+          Founded in 2024 by a board-certified nurse practitioner with over a decade of experience 
+          in primary care and chronic disease management, our practice was built on the belief that 
+          healthcare should be accessible, continuous, and centered on the whole person — not just 
+          symptoms on a chart.
+        </p>
+        <p>
+          We recognized that many health concerns, especially chronic conditions, thrive on consistent 
+          monitoring and ongoing support — something traditional office visits struggle to provide 
+          efficiently. Virtual care offered a solution: the ability to deliver high-quality medical 
+          care while respecting our patients' time and lifestyle.
+        </p>
+      </div>
+      
+      <div class="story-stats">
+        <div class="stat-item">
+          <div class="stat-number">2024</div>
+          <div class="stat-label">Year Founded</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1000+</div>
+          <div class="stat-label">Patients Served</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">99%</div>
+          <div class="stat-label">Patient Satisfaction</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Secure Messaging</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section">
+<!-- OUR APPROACH -->
+<section class="section approach-section">
   <div class="container">
-    <h2>Our Approach</h2>
-    <p>
-      We combine evidence-based medicine with lifestyle-focused care to support
-      chronic disease management, prevention, and overall wellness.
-      Care plans are individualized and built around realistic, sustainable changes.
-    </p>
+    <div class="section-header">
+      <h2 class="section-title">Our Unique Approach</h2>
+      <p class="section-subtitle">How we're different from traditional healthcare</p>
+    </div>
+    
+    <div class="approach-grid">
+      <div class="approach-card">
+        <div class="approach-icon">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <h3>Whole-Person Care</h3>
+        <p>
+          We look beyond symptoms to understand lifestyle, habits, environment, and personal goals, 
+          creating care plans that address the complete picture of your health.
+        </p>
+      </div>
+      
+      <div class="approach-card">
+        <div class="approach-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Partnership Model</h3>
+        <p>
+          Your health journey is a collaboration. We provide expertise and guidance, while you 
+          bring self-knowledge and commitment to your wellbeing.
+        </p>
+      </div>
+      
+      <div class="approach-card">
+        <div class="approach-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Prevention Focus</h3>
+        <p>
+          We prioritize preventing health issues before they start, using data, screenings, and 
+          lifestyle interventions to maintain and improve your long-term health.
+        </p>
+      </div>
+      
+      <div class="approach-card">
+        <div class="approach-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>Time & Attention</h3>
+        <p>
+          Our virtual visits allow for 30-60 minute consultations — far beyond the traditional 
+          15-minute office visit — ensuring all your concerns are addressed.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section light">
+<!-- WHY TELEMEDICINE -->
+<section class="section light telemedicine-section">
   <div class="container">
-    <h2>Our Mission</h2>
-    <p>
-      To empower individuals to take control of their health through accessible,
-      compassionate, and clinician-led virtual care.
-    </p>
+    <div class="section-header">
+      <h2 class="section-title">Why We Chose Virtual Care</h2>
+      <p class="section-subtitle">The benefits that make telemedicine ideal for modern healthcare</p>
+    </div>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3><i class="fas fa-home"></i> Accessibility</h3>
+        <p>Receive care from anywhere — home, office, or while traveling — eliminating geographic barriers to quality healthcare.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <h3><i class="fas fa-calendar-check"></i> Convenience</h3>
+        <p>Flexible scheduling with evening and weekend appointments that work around your life, not the other way around.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <h3><i class="fas fa-shield-alt"></i> Continuity</h3>
+        <p>Build lasting relationships with your provider who knows your history, preferences, and health goals intimately.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <h3><i class="fas fa-lock"></i> Privacy</h3>
+        <p>Discuss sensitive health matters from the comfort and privacy of your own space, without crowded waiting rooms.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <h3><i class="fas fa-money-bill-wave"></i> Cost-Effective</h3>
+        <p>Save time and money on travel, parking, and time off work while receiving the same high-quality care.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <h3><i class="fas fa-comments-medical"></i> Ongoing Support</h3>
+        <p>Secure messaging between visits ensures continuous support and quick responses to health questions.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- OPTIONAL PROVIDER SECTION -->
-<section class="section">
+<!-- MEET THE PROVIDER -->
+<section class="section provider-section" id="meet-provider">
   <div class="container">
-    <h2>Your Provider</h2>
-    <p>
-      Care is led by a board-certified nurse practitioner committed to
-      patient-centered, ethical, and evidence-based practice.
-    </p>
-    <!-- Optional photo can be added later -->
+    <div class="section-header">
+      <h2 class="section-title">Meet Your Healthcare Partner</h2>
+      <p class="section-subtitle">Expert care from a trusted, experienced medical professional</p>
+    </div>
+    
+    <div class="provider-profile">
+      <div class="provider-image">
+        <!-- Placeholder for provider photo - replace with actual image -->
+        <div class="image-placeholder">
+          <i class="fas fa-user-md"></i>
+          <p>Provider Photo</p>
+        </div>
+      </div>
+      
+      <div class="provider-details">
+        <h3>Nurse Practitioner, Board-Certified</h3>
+        <p class="provider-title">Founder & Primary Care Provider</p>
+        
+        <div class="provider-bio">
+          <p>
+            With over 10 years of experience in primary care and chronic disease management, 
+            our provider brings a wealth of clinical knowledge combined with a genuine passion 
+            for patient-centered care. Trained at leading medical institutions, they have 
+            dedicated their career to helping patients navigate complex health journeys with 
+            compassion and expertise.
+          </p>
+          
+          <p>
+            Specializing in hypertension, diabetes, cholesterol management, and preventive 
+            care, they believe in treating the whole person — not just symptoms — and 
+            empowering patients with the knowledge and tools to take charge of their health.
+          </p>
+        </div>
+        
+        <div class="provider-credentials">
+          <h4>Credentials & Education</h4>
+          <div class="credentials-grid">
+            <div class="credential-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong>Master of Science in Nursing</strong>
+                <p>Family Nurse Practitioner</p>
+              </div>
+            </div>
+            <div class="credential-item">
+              <i class="fas fa-award"></i>
+              <div>
+                <strong>Board Certified</strong>
+                <p>American Nurses Credentialing Center</p>
+              </div>
+            </div>
+            <div class="credential-item">
+              <i class="fas fa-stethoscope"></i>
+              <div>
+                <strong>Clinical Experience</strong>
+                <p>10+ Years Primary Care</p>
+              </div>
+            </div>
+            <div class="credential-item">
+              <i class="fas fa-heartbeat"></i>
+              <div>
+                <strong>Specializations</strong>
+                <p>Chronic Disease Management</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="provider-philosophy">
+          <h4>Healthcare Philosophy</h4>
+          <blockquote>
+            "True healthcare transformation happens when we move beyond treating symptoms 
+            and start understanding the whole person. My goal is to partner with patients 
+            to create sustainable health strategies that fit their unique lives."
+          </blockquote>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Ready to Begin Your Care Journey?</h2>
-  <a href="book.html" class="btn-primary">Book a Visit</a>
+<!-- VALUES -->
+<section class="section light values-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Core Values</h2>
+      <p class="section-subtitle">The principles that guide everything we do</p>
+    </div>
+    
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h3>Compassion</h3>
+        <p>We listen with empathy and treat every patient with dignity, respect, and kindness.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3>Evidence-Based</h3>
+        <p>Our care is grounded in current medical research and proven clinical guidelines.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-user-shield"></i>
+        </div>
+        <h3>Integrity</h3>
+        <p>We maintain the highest ethical standards and transparent communication in all interactions.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Innovation</h3>
+        <p>We embrace technology to enhance care delivery while preserving the human connection.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Collaboration</h3>
+        <p>We believe healthcare is a partnership between provider and patient working toward shared goals.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3>Excellence</h3>
+        <p>We strive for the highest quality in every aspect of patient care and service delivery.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- FINAL CTA -->
+<section class="cta cta-about">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Experience Healthcare Your Way?</h2>
+      <p>Join our community of patients who have discovered the convenience and quality of personalized virtual care.</p>
+      <div class="cta-buttons">
+        <a href="book.html" class="btn-primary btn-large btn-cta">
+          <i class="fas fa-calendar-plus"></i> Schedule Your First Visit
+        </a>
+        <a href="contact.html" class="btn-secondary btn-large">
+          <i class="fas fa-comments"></i> Contact Us First
+        </a>
+      </div>
+      <p class="cta-note">
+        <i class="fas fa-star"></i> New patient appointments available within 48 hours
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (consistent with homepage) -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-main">
+      <div class="footer-logo">
+        <i class="fas fa-heartbeat footer-logo-icon"></i>
+        <div>
+          <h3>Health Matters Hub</h3>
+          <p>Virtual Primary Care & Wellness</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="contact-info">
+            <i class="fas fa-envelope"></i> info@healthmattershub.com<br>
+            <i class="fas fa-phone"></i> (555) 123-HEALTH
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-info">
+        <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
+        <p>
+          <a href="contact.html">Contact</a> | 
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="terms.html">Terms of Service</a>
+        </p>
+      </div>
+      
+      <div class="footer-note">
+        <p>
+          <i class="fas fa-exclamation-triangle"></i> For medical emergencies, call 911. This site does not provide medical advice.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-container">
-
-    <div class="footer-info">
-      <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
-      <p>
-        <a href="contact.html">Contact</a> | 
-        <a href="privacy.html">Privacy Policy</a>
-      </p>
-    </div>
-
-    <div class="footer-note">
-      <p>
-        ⚠️ For medical questions, please schedule a visit. This site does not provide medical advice.
-      </p>
-    </div>
-  </div>
-</footer>

@@ -3,119 +3,493 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How It Works | Health Matters Hub</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>How It Works | Health Matters Hub | Virtual Primary Care & Wellness</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- HEADER (consistent with homepage) -->
 <header class="header">
-  <div class="container nav">
-    <div class="logo">Health Matters Hub</div>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="container nav-container">
+    <div class="logo-container">
+      <div class="logo">
+        <i class="fas fa-heartbeat logo-icon"></i>
+        <div>
+          <h1 class="logo-text">Health Matters Hub</h1>
+          <p class="logo-subtext">Virtual Primary Care Specialists</p>
+        </div>
+      </div>
+    </div>
 
     <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="book.html" class="btn-primary">Book a Visit</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="services.html"><i class="fas fa-stethoscope"></i> Services</a>
+      <a href="how-it-works.html" class="active"><i class="fas fa-play-circle"></i> How It Works</a>
+      <a href="about.html"><i class="fas fa-user-md"></i> About</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="book.html" class="btn-primary btn-header"><i class="fas fa-calendar-check"></i> Book a Visit</a>
     </nav>
 
-    <div class="hamburger" id="hamburger">☰</div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </div>
 </header>
 
 <!-- PAGE HERO -->
-<section class="hero">
+<section class="hero hero-how-it-works">
+  <div class="hero-overlay"></div>
   <div class="container">
-    <h1>How Virtual Care Works</h1>
-    <p>Simple, secure, and designed around your health needs.</p>
+    <div class="hero-content">
+      <span class="hero-tag">
+        <i class="fas fa-play-circle"></i> SIMPLE PROCESS
+      </span>
+      <h1 class="hero-title">How Virtual Care Works</h1>
+      <p class="hero-subtitle">
+        A seamless three-step process designed for convenience, clarity, and continuity of care. 
+        Experience healthcare that fits your life, not the other way around.
+      </p>
+      <div class="hero-buttons">
+        <a href="#process-steps" class="btn-primary btn-large">
+          <i class="fas fa-arrow-down"></i> See the Process
+        </a>
+        <a href="book.html" class="btn-secondary btn-large">
+          <i class="fas fa-calendar-check"></i> Start Now
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- BEFORE VISIT -->
-<section class="section">
+<!-- PROCESS OVERVIEW -->
+<section class="section light overview-section">
   <div class="container">
-    <h2>Before Your Visit</h2>
-    <p>
-      Schedule your appointment online at a time that works for you.
-      You will receive clear instructions on how to join your virtual visit.
-    </p>
+    <div class="section-header">
+      <h2 class="section-title">Your Journey to Better Health</h2>
+      <p class="section-subtitle">
+        From scheduling to ongoing care, we've streamlined every step to ensure 
+        a smooth, efficient, and effective healthcare experience.
+      </p>
+    </div>
+    
+    <div class="journey-stats">
+      <div class="stat-card">
+        <div class="stat-number">1</div>
+        <h3>Book Online</h3>
+        <p>Minutes to schedule</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">2</div>
+        <h3>Virtual Visit</h3>
+        <p>30-60 minute consultation</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">3</div>
+        <h3>Ongoing Care</h3>
+        <p>Continuous support</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- DURING VISIT -->
-<section class="section light">
+<!-- DETAILED PROCESS STEPS -->
+<section class="section process-steps-detailed" id="process-steps">
   <div class="container">
-    <h2>During the Visit</h2>
-    <p>
-      Meet with your provider securely via video. We’ll review your concerns,
-      medical history, medications, and lifestyle factors.
-    </p>
+    <div class="section-header">
+      <h2 class="section-title">Step-by-Step Guide</h2>
+      <p class="section-subtitle">Here's exactly what to expect at every stage of your virtual care journey.</p>
+    </div>
+    
+    <div class="process-timeline">
+      <!-- Step 1 -->
+      <div class="timeline-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <div class="step-header">
+            <h3>Schedule Your Appointment</h3>
+            <div class="step-time">
+              <i class="far fa-clock"></i> 5 minutes
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-description">
+              <p>Choose a convenient time that fits your schedule using our secure online booking system. We offer appointments during business hours, evenings, and weekends.</p>
+            </div>
+            <div class="step-details">
+              <div class="detail-column">
+                <h4><i class="fas fa-check-circle"></i> What You'll Do:</h4>
+                <ul>
+                  <li>Select appointment type (new patient, follow-up, chronic care)</li>
+                  <li>Choose preferred date and time</li>
+                  <li>Complete brief intake form</li>
+                  <li>Provide insurance information (if applicable)</li>
+                  <li>Receive confirmation email with instructions</li>
+                </ul>
+              </div>
+              <div class="detail-column">
+                <h4><i class="fas fa-mobile-alt"></i> What You'll Need:</h4>
+                <ul>
+                  <li>Computer, tablet, or smartphone</li>
+                  <li>Stable internet connection</li>
+                  <li>Valid email address</li>
+                  <li>Photo ID (for new patients)</li>
+                  <li>List of current medications</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="timeline-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <div class="step-header">
+            <h3>Prepare for Your Visit</h3>
+            <div class="step-time">
+              <i class="far fa-clock"></i> 10-15 minutes
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-description">
+              <p>Get everything ready to make the most of your virtual consultation. Preparation helps ensure efficient, productive visits.</p>
+            </div>
+            <div class="step-details">
+              <div class="detail-column">
+                <h4><i class="fas fa-clipboard-check"></i> Before Your Visit:</h4>
+                <ul>
+                  <li>Test your camera and microphone</li>
+                  <li>Find a quiet, private space</li>
+                  <li>Have your medications ready</li>
+                  <li>Note down symptoms and questions</li>
+                  <li>Take any relevant vitals (if available)</li>
+                </ul>
+              </div>
+              <div class="detail-column">
+                <h4><i class="fas fa-envelope-open-text"></i> You'll Receive:</h4>
+                <ul>
+                  <li>Secure video link 24 hours before</li>
+                  <li>Reminder text/email 2 hours before</li>
+                  <li>Pre-visit questionnaire</li>
+                  <li>Instructions for virtual waiting room</li>
+                  <li>Technical support contact</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="timeline-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <div class="step-header">
+            <h3>Connect with Your Provider</h3>
+            <div class="step-time">
+              <i class="far fa-clock"></i> 30-60 minutes
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-description">
+              <p>Meet face-to-face with your board-certified provider through our secure, HIPAA-compliant video platform for a comprehensive consultation.</p>
+            </div>
+            <div class="step-details">
+              <div class="detail-column">
+                <h4><i class="fas fa-user-md"></i> During Your Visit:</h4>
+                <ul>
+                  <li>Review medical history and concerns</li>
+                  <li>Discuss symptoms and lifestyle factors</li>
+                  <li>Receive personalized assessment</li>
+                  <li>Collaborate on treatment plan</li>
+                  <li>Ask questions and get answers</li>
+                </ul>
+              </div>
+              <div class="detail-column">
+                <h4><i class="fas fa-shield-alt"></i> Virtual Visit Features:</h4>
+                <ul>
+                  <li>End-to-end encryption</li>
+                  <li>Screen sharing for education</li>
+                  <li>Digital prescription capability</li>
+                  <li>Secure document sharing</li>
+                  <li>Family member participation option</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 4 -->
+      <div class="timeline-step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <div class="step-header">
+            <h3>Receive Your Care Plan</h3>
+            <div class="step-time">
+              <i class="far fa-clock"></i> Immediate to 24 hours
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-description">
+              <p>Get your personalized treatment plan, prescriptions, and follow-up instructions through our secure patient portal.</p>
+            </div>
+            <div class="step-details">
+              <div class="detail-column">
+                <h4><i class="fas fa-file-medical"></i> After Your Visit:</h4>
+                <ul>
+                  <li>Personalized treatment summary</li>
+                  <li>Prescriptions sent to your pharmacy</li>
+                  <li>Lab/imaging orders if needed</li>
+                  <li>Specialist referrals when necessary</li>
+                  <li>Educational resources</li>
+                </ul>
+              </div>
+              <div class="detail-column">
+                <h4><i class="fas fa-tasks"></i> Next Steps May Include:</h4>
+                <ul>
+                  <li>Scheduling follow-up appointment</li>
+                  <li>Completing lab tests</li>
+                  <li>Starting new medications</li>
+                  <li>Implementing lifestyle changes</li>
+                  <li>Connecting with specialists</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Step 5 -->
+      <div class="timeline-step">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <div class="step-header">
+            <h3>Ongoing Support & Follow-up</h3>
+            <div class="step-time">
+              <i class="far fa-clock"></i> Continuous
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-description">
+              <p>Maintain continuous communication with your care team through secure messaging and scheduled follow-ups to ensure optimal health outcomes.</p>
+            </div>
+            <div class="step-details">
+              <div class="detail-column">
+                <h4><i class="fas fa-comments-medical"></i> Ongoing Support:</h4>
+                <ul>
+                  <li>Secure messaging with care team</li>
+                  <li>Medication refill requests</li>
+                  <li>Lab result explanations</li>
+                  <li>Symptom check-ins</li>
+                  <li>Health goal tracking</li>
+                </ul>
+              </div>
+              <div class="detail-column">
+                <h4><i class="fas fa-calendar-plus"></i> Long-term Care:</h4>
+                <ul>
+                  <li>Regular chronic condition monitoring</li>
+                  <li>Preventive care scheduling</li>
+                  <li>Annual wellness visits</li>
+                  <li>Medication adjustments as needed</li>
+                  <li>Health progress reviews</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- AFTER VISIT -->
-<section class="section">
+<!-- ADDITIONAL SECTIONS -->
+<section class="section light additional-info">
   <div class="container">
-    <h2>After the Visit</h2>
-    <p>
-      Prescriptions, lab orders, referrals, and follow-up plans are handled
-      promptly. Secure messaging is available for ongoing communication.
-    </p>
+    <div class="info-grid">
+      <!-- Labs & Referrals -->
+      <div class="info-card" id="labs-referrals">
+        <div class="info-icon">
+          <i class="fas fa-microscope"></i>
+        </div>
+        <h3>Labs, Imaging & Referrals</h3>
+        <p>When diagnostic testing is needed, we coordinate everything seamlessly:</p>
+        <ul>
+          <li>Lab orders at convenient local facilities</li>
+          <li>Imaging referrals (X-ray, MRI, CT, ultrasound)</li>
+          <li>Specialist referrals with care coordination</li>
+          <li>Result follow-up and explanation</li>
+          <li>Insurance pre-authorization assistance</li>
+        </ul>
+      </div>
+      
+      <!-- Insurance & Payment -->
+      <div class="info-card" id="insurance-payment">
+        <div class="info-icon">
+          <i class="fas fa-credit-card"></i>
+        </div>
+        <h3>Insurance & Payment</h3>
+        <p>Transparent pricing and flexible payment options:</p>
+        <ul>
+          <li>Direct billing to most major insurance plans</li>
+          <li>Clear self-pay pricing for uninsured patients</li>
+          <li>FSA/HSA eligible services</li>
+          <li>Cost estimates before service</li>
+          <li>Flexible payment plans available</li>
+        </ul>
+        <div class="payment-note">
+          <p><strong>Note:</strong> Insurance coverage varies by plan. We verify benefits before your first visit.</p>
+        </div>
+      </div>
+      
+      <!-- Technical Requirements -->
+      <div class="info-card" id="tech-requirements">
+        <div class="info-icon">
+          <i class="fas fa-laptop-medical"></i>
+        </div>
+        <h3>Technical Requirements</h3>
+        <p>What you need for a successful virtual visit:</p>
+        <ul>
+          <li>Smartphone, tablet, or computer</li>
+          <li>Stable internet connection</li>
+          <li>Webcam and microphone</li>
+          <li>Updated web browser (Chrome, Safari, Edge)</li>
+          <li>Private, well-lit space</li>
+        </ul>
+        <div class="tech-support">
+          <p><i class="fas fa-headset"></i> <strong>Technical support</strong> available 30 minutes before your appointment</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- LABS & REFERRALS -->
-<section class="section light">
+<!-- FAQ PREVIEW -->
+<section class="section faq-preview">
   <div class="container">
-    <h2>Labs, Imaging & Referrals</h2>
-    <p>
-      When needed, labs and imaging can be ordered at convenient locations.
-      Referrals to specialists are coordinated as part of your care.
-    </p>
+    <div class="section-header">
+      <h2 class="section-title">Common Questions</h2>
+      <p class="section-subtitle">Quick answers to frequently asked questions about virtual care.</p>
+    </div>
+    
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4><i class="far fa-question-circle"></i> Is virtual care as effective as in-person visits?</h4>
+        <p>For many primary care needs, yes. Virtual care is particularly effective for medication management, chronic condition follow-ups, and health consultations. Some conditions may require in-person evaluation.</p>
+      </div>
+      <div class="faq-item">
+        <h4><i class="far fa-question-circle"></i> What if I need prescriptions?</h4>
+        <p>We can prescribe most non-controlled medications electronically to your preferred pharmacy. Controlled substances have specific regulations and limitations.</p>
+      </div>
+      <div class="faq-item">
+        <h4><i class="far fa-question-circle"></i> Can I use my insurance?</h4>
+        <p>We accept most major insurance plans. Our team verifies benefits before your first visit and provides clear cost information.</p>
+      </div>
+      <div class="faq-item">
+        <h4><i class="far fa-question-circle"></i> What if I have technical issues?</h4>
+        <p>Technical support is available before and during your appointment. We can also switch to phone consultation if video isn't working.</p>
+      </div>
+    </div>
+    
+    <div class="center">
+      <a href="faq.html" class="btn-secondary">
+        <i class="fas fa-question-circle"></i> View Full FAQ
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- INSURANCE -->
-<section class="section">
+<!-- FINAL CTA -->
+<section class="cta cta-process">
   <div class="container">
-    <h2>Insurance & Payment</h2>
-    <p>
-      Insurance and self-pay options may be available. Details will be discussed
-      before your visit so there are no surprises.
-    </p>
+    <div class="cta-content">
+      <h2>Ready to Experience Seamless Virtual Care?</h2>
+      <p>Join thousands of patients who have transformed their healthcare experience with our convenient, comprehensive virtual care.</p>
+      <div class="cta-buttons">
+        <a href="book.html" class="btn-primary btn-large btn-cta">
+          <i class="fas fa-calendar-plus"></i> Schedule Your First Visit
+        </a>
+        <a href="contact.html" class="btn-secondary btn-large">
+          <i class="fas fa-comments"></i> Still Have Questions?
+        </a>
+      </div>
+      <p class="cta-note">
+        <i class="fas fa-phone-alt"></i> Call (555) 123-HEALTH to speak with our care coordinator
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Ready to Get Started?</h2>
-  <a href="book.html" class="btn-primary">Book a Visit</a>
-</section>
+<!-- FOOTER (consistent with homepage) -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-main">
+      <div class="footer-logo">
+        <i class="fas fa-heartbeat footer-logo-icon"></i>
+        <div>
+          <h3>Health Matters Hub</h3>
+          <p>Virtual Primary Care & Wellness</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="contact-info">
+            <i class="fas fa-envelope"></i> info@healthmattershub.com<br>
+            <i class="fas fa-phone"></i> (555) 123-HEALTH
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-info">
+        <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
+        <p>
+          <a href="contact.html">Contact</a> | 
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="terms.html">Terms of Service</a>
+        </p>
+      </div>
+      
+      <div class="footer-note">
+        <p>
+          <i class="fas fa-exclamation-triangle"></i> For medical emergencies, call 911. This site does not provide medical advice.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 </body>
 </html>
-
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-container">
-
-    <div class="footer-info">
-      <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
-      <p>
-        <a href="contact.html">Contact</a> | 
-        <a href="privacy.html">Privacy Policy</a>
-      </p>
-    </div>
-
-    <div class="footer-note">
-      <p>
-        ⚠️ For medical questions, please schedule a visit. This site does not provide medical advice.
-      </p>
-    </div>
-  </div>
-</footer>

@@ -3,101 +3,424 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Health Matters Hub</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Our Services | Health Matters Hub | Virtual Primary Care & Wellness</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- HEADER (same as home) -->
+<!-- HEADER (consistent with homepage) -->
 <header class="header">
-  <div class="container nav">
-    <div class="logo">Health Matters Hub</div>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="container nav-container">
+    <div class="logo-container">
+      <div class="logo">
+        <i class="fas fa-heartbeat logo-icon"></i>
+        <div>
+          <h1 class="logo-text">Health Matters Hub</h1>
+          <p class="logo-subtext">Virtual Primary Care Specialists</p>
+        </div>
+      </div>
+    </div>
 
     <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="book.html" class="btn-primary">Book a Visit</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="services.html" class="active"><i class="fas fa-stethoscope"></i> Services</a>
+      <a href="how-it-works.html"><i class="fas fa-play-circle"></i> How It Works</a>
+      <a href="about.html"><i class="fas fa-user-md"></i> About</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="book.html" class="btn-primary btn-header"><i class="fas fa-calendar-check"></i> Book a Visit</a>
     </nav>
 
-    <div class="hamburger" id="hamburger">☰</div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </div>
 </header>
 
 <!-- PAGE HERO -->
-<section class="hero">
+<section class="hero hero-services">
+  <div class="hero-overlay"></div>
   <div class="container">
-    <h1>Our Services</h1>
-    <p>Comprehensive virtual care focused on long-term health.</p>
+    <div class="hero-content">
+      <span class="hero-tag">
+        <i class="fas fa-stethoscope"></i> COMPREHENSIVE CARE
+      </span>
+      <h1 class="hero-title">Our Specialized Services</h1>
+      <p class="hero-subtitle">
+        Expert virtual primary care and chronic disease management designed to fit your lifestyle. 
+        Delivering high-quality healthcare directly to you, wherever you are.
+      </p>
+      <div class="hero-buttons">
+        <a href="#services-list" class="btn-primary btn-large">
+          <i class="fas fa-arrow-down"></i> Explore Services
+        </a>
+        <a href="book.html" class="btn-secondary btn-large">
+          <i class="fas fa-calendar-check"></i> Schedule Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES INTRODUCTION -->
+<section class="section light intro-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Why Choose Our Virtual Care?</h2>
+      <p class="section-subtitle">
+        We combine medical expertise with technology to provide personalized, 
+        continuous care that focuses on your long-term health and wellness goals.
+      </p>
+    </div>
+    
+    <div class="grid-3">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-user-clock"></i>
+        </div>
+        <h3>Flexible Scheduling</h3>
+        <p>Book appointments at times that work for you, including evenings and weekends.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-heart-circle-check"></i>
+        </div>
+        <h3>Continuity of Care</h3>
+        <p>Build a lasting relationship with your provider for consistent, personalized care.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-heart"></i>
+        </div>
+        <h3>HIPAA Secure</h3>
+        <p>All consultations and health data are protected with enterprise-grade security.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- SERVICES LIST -->
-<section class="section">
-  <div class="container grid-2">
-
-    <div class="card">
-      <h3>Virtual Primary Care</h3>
-      <p><strong>Includes:</strong> routine visits, health concerns, care coordination.</p>
-      <p><strong>Does not include:</strong> emergency care or in-person procedures.</p>
+<section class="section services-detailed" id="services-list">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Comprehensive Services</h2>
+      <p class="section-subtitle">Each service is designed to provide specific, targeted care for your health needs.</p>
     </div>
-
-    <div class="card">
-      <h3>Chronic Disease Management</h3>
-      <p><strong>Includes:</strong> hypertension, diabetes, cholesterol, thyroid care.</p>
-      <p><strong>Does not include:</strong> acute emergency treatment.</p>
+    
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-detail-card" id="primary-care">
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h3>Virtual Primary Care</h3>
+        </div>
+        <div class="service-content">
+          <p class="service-description">
+            Ongoing comprehensive primary care from the comfort of your home with consistent provider relationships. 
+            Your medical home for routine and preventive healthcare needs.
+          </p>
+          <div class="service-includes">
+            <h4><i class="fas fa-check-circle"></i> What's Included:</h4>
+            <ul>
+              <li>Annual wellness visits and consultations</li>
+              <li>Acute illness management (colds, flu, infections)</li>
+              <li>Health risk assessments and screenings</li>
+              <li>Care coordination and health advocacy</li>
+              <li>Follow-up visits and ongoing support</li>
+            </ul>
+          </div>
+          <div class="service-excludes">
+            <h4><i class="fas fa-info-circle"></i> Please Note:</h4>
+            <ul>
+              <li>Does not include emergency care (call 911 for emergencies)</li>
+              <li>Does not replace in-person physical exams when required</li>
+              <li>Limited controlled substance prescriptions</li>
+            </ul>
+          </div>
+          <a href="book.html" class="btn-primary service-btn">
+            <i class="fas fa-calendar-plus"></i> Schedule Primary Care Visit
+          </a>
+        </div>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="service-detail-card" id="chronic-care">
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3>Chronic Disease Management</h3>
+        </div>
+        <div class="service-content">
+          <p class="service-description">
+            Personalized support and management for chronic conditions with regular monitoring, 
+            medication adjustments, and lifestyle guidance to optimize your health outcomes.
+          </p>
+          <div class="service-includes">
+            <h4><i class="fas fa-check-circle"></i> Conditions We Manage:</h4>
+            <ul>
+              <li>Hypertension (High Blood Pressure)</li>
+              <li>Type 2 Diabetes and Pre-diabetes</li>
+              <li>High Cholesterol & Lipid Disorders</li>
+              <li>Thyroid Conditions (Hypothyroidism)</li>
+              <li>Asthma & COPD Management</li>
+              <li>Obesity and Weight Management</li>
+            </ul>
+          </div>
+          <div class="service-excludes">
+            <h4><i class="fas fa-info-circle"></i> Please Note:</h4>
+            <ul>
+              <li>Complex cases may require specialist referral</li>
+              <li>Does not include acute emergency treatment</li>
+              <li>Regular monitoring required for optimal management</li>
+            </ul>
+          </div>
+          <a href="book.html" class="btn-primary service-btn">
+            <i class="fas fa-heart-circle-plus"></i> Start Chronic Care Management
+          </a>
+        </div>
+      </div>
+      
+      <!-- Service 3 -->
+      <div class="service-detail-card" id="preventive-care">
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="fas fa-apple-alt"></i>
+          </div>
+          <h3>Preventive & Lifestyle Care</h3>
+        </div>
+        <div class="service-content">
+          <p class="service-description">
+            Proactive healthcare focused on prevention, healthy habits, and long-term wellness 
+            through personalized guidance and evidence-based lifestyle interventions.
+          </p>
+          <div class="service-includes">
+            <h4><i class="fas fa-check-circle"></i> What's Included:</h4>
+            <ul>
+              <li>Personalized wellness planning</li>
+              <li>Nutrition and exercise guidance</li>
+              <li>Preventive health screenings</li>
+              <li>Stress management techniques</li>
+              <li>Sleep optimization strategies</li>
+              <li>Smoking cessation support</li>
+            </ul>
+          </div>
+          <div class="service-excludes">
+            <h4><i class="fas fa-info-circle"></i> Please Note:</h4>
+            <ul>
+              <li>Does not include vaccinations or immunizations</li>
+              <li>Physical exams may require in-person visits</li>
+              <li>Wellness coaching complements but doesn't replace medical care</li>
+            </ul>
+          </div>
+          <a href="book.html" class="btn-primary service-btn">
+            <i class="fas fa-heart-pulse"></i> Begin Wellness Journey
+          </a>
+        </div>
+      </div>
+      
+      <!-- Service 4 -->
+      <div class="service-detail-card" id="medication">
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="fas fa-pills"></i>
+          </div>
+          <h3>Medication Management</h3>
+        </div>
+        <div class="service-content">
+          <p class="service-description">
+            Comprehensive medication reviews, adjustments, and monitoring with convenient 
+            pharmacy coordination to ensure safe and effective treatment plans.
+          </p>
+          <div class="service-includes">
+            <h4><i class="fas fa-check-circle"></i> What's Included:</h4>
+            <ul>
+              <li>Medication reviews and reconciliation</li>
+              <li>Prescription refills and adjustments</li>
+              <li>Side effect monitoring and management</li>
+              <li>Pharmacy coordination and delivery options</li>
+              <li>Cost-effective medication alternatives</li>
+            </ul>
+          </div>
+          <div class="service-excludes">
+            <h4><i class="fas fa-info-circle"></i> Please Note:</h4>
+            <ul>
+              <li>Controlled substances have legal restrictions</li>
+              <li>Certain medications require regular in-person monitoring</li>
+              <li>Initial controlled substance prescriptions typically not provided</li>
+            </ul>
+          </div>
+          <a href="book.html" class="btn-primary service-btn">
+            <i class="fas fa-prescription-bottle-medical"></i> Discuss Medications
+          </a>
+        </div>
+      </div>
+      
+      <!-- Service 5 -->
+      <div class="service-detail-card" id="labs-referrals">
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="fas fa-microscope"></i>
+          </div>
+          <h3>Lab Ordering & Specialist Referrals</h3>
+        </div>
+        <div class="service-content">
+          <p class="service-description">
+            Convenient lab orders and coordination with specialists when needed, 
+            ensuring comprehensive care that extends beyond virtual consultations.
+          </p>
+          <div class="service-includes">
+            <h4><i class="fas fa-check-circle"></i> What's Included:</h4>
+            <ul>
+              <li>Laboratory test orders and interpretation</li>
+              <li>Imaging study referrals (X-ray, MRI, CT)</li>
+              <li>Specialist physician referrals</li>
+              <li>Result follow-up and explanation</li>
+              <li>Coordination with local testing facilities</li>
+            </ul>
+          </div>
+          <div class="service-excludes">
+            <h4><i class="fas fa-info-circle"></i> Please Note:</h4>
+            <ul>
+              <li>Does not include on-site testing or procedures</li>
+              <li>Lab/imaging costs billed separately by facilities</li>
+              <li>Specialist availability varies by location</li>
+            </ul>
+          </div>
+          <a href="book.html" class="btn-primary service-btn">
+            <i class="fas fa-file-medical"></i> Request Lab Orders
+          </a>
+        </div>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>Preventive Care</h3>
-      <p><strong>Includes:</strong> wellness planning, lifestyle guidance, screenings.</p>
-      <p><strong>Does not include:</strong> vaccinations or physical exams.</p>
-    </div>
-
-    <div class="card">
-      <h3>Medication Management</h3>
-      <p><strong>Includes:</strong> medication reviews, refills, adjustments.</p>
-      <p><strong>Does not include:</strong> controlled substances where restricted.</p>
-    </div>
-
-    <div class="card">
-      <h3>Lab Ordering & Referrals</h3>
-      <p><strong>Includes:</strong> lab orders, imaging referrals, specialist referrals.</p>
-      <p><strong>Does not include:</strong> on-site testing.</p>
-    </div>
-
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Ready to Get Started?</h2>
-  <a href="book.html" class="btn-primary">Book a Visit</a>
+<!-- SERVICE COMPARISON -->
+<section class="section light comparison-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">What Sets Us Apart</h2>
+      <p class="section-subtitle">Compare our comprehensive virtual care with traditional primary care.</p>
+    </div>
+    
+    <div class="comparison-grid">
+      <div class="comparison-card traditional">
+        <h3>Traditional Primary Care</h3>
+        <ul>
+          <li><i class="fas fa-clock"></i> Long wait times for appointments</li>
+          <li><i class="fas fa-car"></i> Travel required for visits</li>
+          <li><i class="fas fa-calendar-times"></i> Limited after-hours access</li>
+          <li><i class="fas fa-user-clock"></i> Brief 15-minute appointments</li>
+          <li><i class="fas fa-file-alt"></i> Paperwork and administrative delays</li>
+        </ul>
+      </div>
+      
+      <div class="comparison-card our-care">
+        <h3>Our Virtual Primary Care</h3>
+        <ul>
+          <li><i class="fas fa-calendar-check"></i> Same/next-day appointments</li>
+          <li><i class="fas fa-house-medical"></i> Care from your home or office</li>
+          <li><i class="fas fa-moon"></i> Evening and weekend availability</li>
+          <li><i class="fas fa-user-clock"></i> 30-60 minute comprehensive visits</li>
+          <li><i class="fas fa-laptop-medical"></i> Digital records and seamless coordination</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- FINAL CTA -->
+<section class="cta cta-services">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Experience Modern Healthcare?</h2>
+      <p>Take the first step toward personalized, convenient virtual care that fits your lifestyle.</p>
+      <div class="cta-buttons">
+        <a href="book.html" class="btn-primary btn-large btn-cta">
+          <i class="fas fa-video"></i> Schedule Your First Visit
+        </a>
+        <a href="contact.html" class="btn-secondary btn-large">
+          <i class="fas fa-question-circle"></i> Have Questions?
+        </a>
+      </div>
+      <p class="cta-note">
+        <i class="fas fa-phone-alt"></i> Call us at (555) 123-HEALTH for assistance
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (consistent with homepage) -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-main">
+      <div class="footer-logo">
+        <i class="fas fa-heartbeat footer-logo-icon"></i>
+        <div>
+          <h3>Health Matters Hub</h3>
+          <p>Virtual Primary Care & Wellness</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="contact-info">
+            <i class="fas fa-envelope"></i> info@healthmattershub.com<br>
+            <i class="fas fa-phone"></i> (555) 123-HEALTH
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-info">
+        <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
+        <p>
+          <a href="contact.html">Contact</a> | 
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="terms.html">Terms of Service</a>
+        </p>
+      </div>
+      
+      <div class="footer-note">
+        <p>
+          <i class="fas fa-exclamation-triangle"></i> For medical emergencies, call 911. This site does not provide medical advice.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 </body>
 </html>
-
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-container">
-
-    <div class="footer-info">
-      <p>&copy; 2026 Health Matters Hub. All rights reserved.</p>
-      <p>
-        <a href="contact.html">Contact</a> | 
-        <a href="privacy.html">Privacy Policy</a>
-      </p>
-    </div>
-
-    <div class="footer-note">
-      <p>
-        ⚠️ For medical questions, please schedule a visit. This site does not provide medical advice.
-      </p>
-    </div>
-  </div>
-</footer>
