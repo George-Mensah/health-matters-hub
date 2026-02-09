@@ -146,6 +146,37 @@ a:hover {
   margin-top: 20px;
 }
 
+
+/* Add to your existing CSS */
+.header {
+  position: relative; /* Try relative instead of sticky/fixed */
+  z-index: 1000;
+}
+
+.hero-home,
+.hero-services,
+.hero-how-it-works,
+.hero-about,
+.hero-contact,
+.hero-booking {
+  margin-top: -80px; /* Negative margin to pull up */
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile specific */
+@media (max-width: 768px) {
+  .hero-home,
+  .hero-services,
+  .hero-how-it-works,
+  .hero-about,
+  .hero-contact,
+  .hero-booking {
+    margin-top: -60px;
+  }
+} 
+
+
 /* Header Styles */
 .header {
   background-color: var(--white);
