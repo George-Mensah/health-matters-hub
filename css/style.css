@@ -149,7 +149,7 @@ a:hover {
 
 /* Add to your existing CSS */
 .header {
-  position: relative; /* Try relative instead of sticky/fixed */
+  position: sticky; 
   z-index: 1000;
 }
 
@@ -265,12 +265,15 @@ a:hover {
 }
 
 /* Hero Carousel Section */
+
+
 .hero-home {
   height: 90vh;
   min-height: 700px;
   max-height: 900px;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero-carousel {
@@ -329,6 +332,7 @@ a:hover {
   position: relative;
   z-index: 2;
   text-align: center;
+  padding-top: 80px;
   padding: 0 20px;
   max-width: 900px;
   margin: 0 auto;
@@ -389,14 +393,14 @@ a:hover {
 /* Carousel Controls */
 .carousel-controls {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  z-index: 10;
+  z-index: 3;
 }
 
 .carousel-prev,
@@ -867,7 +871,7 @@ a:hover {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    z-index: 1000;
   }
 
   .hamburger-line {
@@ -894,13 +898,13 @@ a:hover {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 85%;
+    width: 50%;
     height: 100vh;
     background-color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 6rem 2rem 2rem;
+    padding: 1rem 1rem 1rem;
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     z-index: 1000;
